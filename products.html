@@ -14,6 +14,17 @@
           margin: 0;
           padding: 0;
       }  
+      @media screen and (min-width: 601px) {
+        h1.example {
+          font-size: 40px;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        h1.example {
+          font-size: 20px;
+        }
+      }
 * {box-sizing: border-box}
 body {font-family: "Lato", sans-serif;}
 
@@ -103,7 +114,7 @@ body {font-family: "Lato", sans-serif;}
           <header style="height: 150px;" id="header" class="fixed-top">
           <div>
         <!-- Uncomment below if you prefer to use an image logo -->
-        <h1 class="text-light"><span><b style="position: auto;"><h1 class="section-title" style="color: rgb(103, 130, 248); font-size:3vw; position: relative; margin-left: 100px"><b style="size: 6vm;">Bihani Enterpries</b></h1></b></span></h1>
+        <h1 class="text-light"><span><b style="position: auto;"><h1 class="section-title example" style="color: rgb(103, 130, 248); position: relative; margin-left: 100px"><b class="example">Bihani Enterpries</b></h1></b></span></h1>
         <a href="index.html#intro" class="scrollto"><img src="Images For Website\Bihani_Enterprises Logo.PNG" style="margin-top: -120px; padding-left: -60px; margin-left: 30px;" width="68px" alt="" class="img-fluid"></a>
       </div>
          <div>
