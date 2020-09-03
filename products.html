@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
   <meta charset="utf-8">
   <title>Bihani Enterprises - Products</title>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description"> 
-  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="HandheldFriendly" content="true">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
       body {
           margin: 0;
@@ -75,6 +74,12 @@ body {font-family: "Lato", sans-serif;}
   color: rgba(255, 0, 0, 0.616);
   font-style: italic;
 }
+.btn {
+  background-color: aqua;
+}
+.btn:hover {
+  background-color: rgb(0, 110, 255);
+}
 </style> 
 
   <!-- Favicons -->
@@ -134,24 +139,96 @@ body {font-family: "Lato", sans-serif;}
         <div class="row">
           <div class="col-lg-12">
             <ul id="portfolio-flters" style="margin-top: 80px;">
-                <li data-filter="*" onclick="w3_close()" class="filter-active"><img src="Images For Website\all.gif" style="margin-top: -3px; margin-left: -3px;" width="45px"></li>
-              <li onclick="w3_close()" data-filter=".filter-honda"><img src="Images For Website\Honda_Logo.png" width="80px"></li>
-              <div class="w3-teal">
-                <li class="w3-button w3-teal w3-xlarge" onclick="w3_open()" data-filter=".filter-midas"><img src="Images For Website\MIDAS-Logo.png" width="80px"></li>
-              </div>
+              <li class="w3-button w3-teal w3-xlarge" onclick="w3_open()" data-filter=".filter-midas"><img src="Images For Website\MIDAS-Logo.png" width="80px"></li>
               <li onclick="w3_close()" data-filter=".filter-bata"><img src="Images For Website\Bata_Industrials_logo.png" height="30px" width="110px"></li>
+              <li onclick="w3_close()" data-filter=".filter-honda"><img src="Images For Website\Honda_Logo.png" width="80px"></li>
               <li onclick="w3_close()" data-filter=".filter-others"><img src="Images For Website\others.gif" width="80px"></li>
+              <li class="filter-active" onclick="w3_close()" data-filter="*"><img src="Images For Website\all.gif" width="40px"></li>
+              <div class="w3-teal">
+              </div>
               <div class="w3-sidebar w3-bar-block" style="display:none" id="mySidebar">
-                <hr> 
-                <li style="color: aqua;" class="w3-bar-item" data-filter=".filter-frontier"><img src="Images For Website\Frontier_Logo.png" height="30px" width="110px"></li>
-                <li style="color: aqua;" class="w3-bar-item" data-filter=".filter-techtion"><img src="Images For Website\Techtion_Logo.png" width="80px"></li>
-                <li style="color: aqua;" class="w3-bar-item" data-filter=".filter-valpro"><img src="Images For Website\Valpro_Logo.png" width="35px"></li>
+                <hr class="dropdown-divider"> 
+                <p>
+                  <a class="btn btn-outline-primary mt-3"1 data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><img src="Images For Website/Valpro_Logo.png" width="25px"></a>
+                  <button class="btn btn-outline-primary mt-3" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2"><img src="Images For Website/Frontier_Logo.png" width="100px"></button>
+                  <button class="btn btn-outline-primary mt-3" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3"><img src="Images For Website/Techtion_Logo.png" width="70px"></button> 
+                </p>
+                <p class="lead" id="close">Please click on one of the above options to see the Bronchures of that company.</p>
+                <div class="row">
+                  <div class="mb-3 mt-2">
+                    <div class="collapse multi-collapse" id="multiCollapseExample1">
+                      <div class="card card-img portfolio-item filter-midas">
+                        <div class="portfolio-item">
+                          <div class="portfolio-wrap">
+                            <img src="Brochers/Valpro_Brocher.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4><font color="white">Valpro Bronchure</font></h4>
+                              <p>Bronchure</p>
+                              <div>
+                                <a href="Brochers/Valpro_Brocher.jpg" data-lightbox="portfolio" data-title="Valpro Bronchure" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                          </div> 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2 mb-3">
+                    <div class="collapse multi-collapse portfolio-item" id="multiCollapseExample2">
+                      <div class="card card-img portfolio-item filter-midas">
+                        <div class="portfolio-item">
+                          <div class="portfolio-wrap">
+                            <img src="Brochers/Frontier_Brocher.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4><font color="white">Frontier Bronchure</font></h4>
+                              <p>Bronchure</p>
+                              <div>
+                                <a href="Brochers/Frontier_Brocher.jpg" data-lightbox="portfolio" data-title="Frontier Bronchure" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                          </div> 
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-2 mb-3">
+                    <div class="collapse multi-collapse portfolio-item" id="multiCollapseExample3">
+                      <div class="card card-img portfolio-item filter-midas">
+                        <div class="portfolio-item">
+                          <div class="portfolio-wrap">
+                            <img src="Brochers/Techtion_Brochere.jpg" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4><font color="white">Techtion Bronchure</font></h4>
+                              <p>Bronchure</p>
+                              <div>
+                                <a href="Brochers/Techtion_Brochere.jpg" data-lightbox="portfolio" data-title="Techtion Bronchure" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                          </div> 
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </ul>
           </div>
         </div>
           
         <div class="row portfolio-container">
+            
+          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-bata">
+          <div class="portfolio-wrap">
+            <img src="Shoes/Bata%20Bora%20Derby.PNG" class="img-fluid" alt="">
+            <div class="portfolio-info">
+                <h4><font color="white">Bata Bora Derby</font></h4>
+              <p>Shoes</p>
+              <div>
+                <a href="Shoes/Bata%20Bora%20Derby.PNG" data-lightbox="portfolio" data-title="Bata Bora Derby" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
             
              <div class="col-lg-4 col-md-6 float-right portfolio-item filter-bata">
             <div class="portfolio-wrap">
@@ -164,292 +241,7 @@ body {font-family: "Lato", sans-serif;}
                 </div>
               </div>
             </div>
-            </div>
-            
-             <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Angel_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Foot Angel</font></h4>
-                <p>Shoes</p>
-                <div>
-                  <a href="Midas/Valpro/Angel_Valpro.png" data-lightbox="portfolio" data-title="Foot Angel" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/Blended_Household_Rubber_Handgloves_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Blended Household Gloves</font></h4>
-                <p>Gloves</p>
-                <div>
-                  <a href="Midas/Frontier/Blended_Household_Rubber_Handgloves_Frontier.png" data-lightbox="portfolio" data-title="Blended Household Gloves" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/Bouffant_Cap_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Bouffant Cap</font></h4>
-                <p>Head</p>
-                <div>
-                  <a href="Midas/Frontier/Bouffant_Cap_Frontier.png" data-lightbox="portfolio" data-title="Bouffant Cap" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/Chem_Splash_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Chem Splash</font></h4>
-                <p>Goggles</p>
-                <div>
-                  <a href="Midas/Frontier/Chem_Splash_Frontier.png" data-lightbox="portfolio" data-title="Chem Splash" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/Cotton_Knitted_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Cotton Knitted</font></h4>
-                <p>Gloves</p>
-                <div>
-                  <a href="Midas/Frontier/Cotton_Knitted_Frontier.png" data-lightbox="portfolio" data-title="Cotton Knitted" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/Dragon_Search_Light_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Dragon Search Light</font></h4>
-                <p>Light</p>
-                <div>
-                  <a href="Midas/Frontier/Dragon_Search_Light_Frontier.png" data-lightbox="portfolio" data-title="Dragon Search Light" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/Driver_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Driver Gloves</font></h4>
-                <p>Gloves</p>
-                <div>
-                  <a href="Midas/Frontier/Driver_Frontier.png" data-lightbox="portfolio" data-title="Driver Gloves" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/Electrical_Mat_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Electrical Mat</font></h4>
-                <p>Mat</p>
-                <div>
-                  <a href="Midas/Frontier/Electrical_Mat_Frontier.png" data-lightbox="portfolio" data-title="Electrical Mat" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/ET_30_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Et 30</font></h4>
-                <p>Goggles</p>
-                <div>
-                  <a href="Midas/Frontier/ET_30_Frontier.png" data-lightbox="portfolio" data-title="Et 30" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/Et_49B_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Et 49B</font></h4>
-                <p>Goggles</p>
-                <div>
-                  <a href="Midas/Frontier/Et_49B_Frontier.png" data-lightbox="portfolio" data-title="Et 49B" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/First_Aid_Kit_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">First Aid Kit</font></h4>
-                <p>Kit</p>
-                <div>
-                  <a href="Midas/Frontier/First_Aid_Kit_Frontier.png" data-lightbox="portfolio" data-title="First Aid Kit" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/Hardy_CL_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Hardy CL</font></h4>
-                <p>Goggles</p>
-                <div>
-                  <a href="Midas/Frontier/Hardy_CL_Frontier.png" data-lightbox="portfolio" data-title="Hardy CL" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/Heatpro_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Heatpro</font></h4>
-                <p>Gloves</p>
-                <div>
-                  <a href="Midas/Frontier/Heatpro_Frontier.png" data-lightbox="portfolio" data-title="Heatpro" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/Household_Rubber_Handgloves_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Household Rubber Gloves</font></h4>
-                <p>Gloves</p>
-                <div>
-                  <a href="Midas/Frontier/Household_Rubber_Handgloves_Frontier.png" data-lightbox="portfolio" data-title="Household Rubber Gloves" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/Hurricane_CL_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Hurricane CL</font></h4>
-                <p>Goggles</p>
-                <div>
-                  <a href="Midas/Frontier/Hurricane_CL_Frontier.png" data-lightbox="portfolio" data-title="Hurricane CL" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/Neoprene_Household_Rubber_Handgloves_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Neoprene Household Gloves</font></h4>
-                <p>Gloves</p>
-                <div>
-                  <a href="Midas/Frontier/Neoprene_Household_Rubber_Handgloves_Frontier.png" data-lightbox="portfolio" data-title="Neoprene Household Gloves" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/Nitrile_Household_Rubber_Handgloves_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Nitrile Household Gloves</font></h4>
-                <p>Gloves</p>
-                <div>
-                  <a href="Midas/Frontier/Nitrile_Household_Rubber_Handgloves_Frontier.png" data-lightbox="portfolio" data-title="Nitrile Household Gloves" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/PVC_Dotted_Cotton_Knitted_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">PVC Dotted Cotton Knitted</font></h4>
-                <p>Gloves</p>
-                <div>
-                  <a href="Midas/Frontier/PVC_Dotted_Cotton_Knitted_Frontier.png" data-lightbox="portfolio" data-title="PVC Dotted Cotton Knitted" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/Remote_Area_Lightning_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Remote Area Lightning</font></h4>
-                <p>Light</p>
-                <div>
-                  <a href="Midas/Frontier/Remote_Area_Lightning_Frontier.png" data-lightbox="portfolio" data-title="Remote Area Lightning" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/Welding_14inches_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Welding 14"</font></h4>
-                <p>Gloves</p>
-                <div>
-                  <a href="Midas/Frontier/Welding_14inches_Frontier.png" data-lightbox="portfolio" data-title="Welding 14''" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-frontier filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Frontier/Welding_16inches_Frontier.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Welding 16"</font></h4>
-                <p>Gloves</p>
-                <div>
-                  <a href="Midas/Frontier/Welding_16inches_Frontier.png" data-lightbox="portfolio" data-title="Welding 16''" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Ranger_Bracket_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Ranger Bracket</font></h4>
-                <p>Head</p>
-                <div>
-                  <a href="Midas/Valpro/Ranger_Bracket_Valpro.png" data-lightbox="portfolio" data-title="Ranger Bracket" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
+            </div> 
             
             <div class="col-lg-4 col-md-6 float-right portfolio-item filter-others">
             <div class="portfolio-wrap">
@@ -489,32 +281,6 @@ body {font-family: "Lato", sans-serif;}
               </div>
             </div>
           </div>
-            
-            <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Body_Guardian_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Body Guardian</font></h4>
-                <p>Jacket</p>
-                <div>
-                  <a href="Midas/Valpro/Body_Guardian_Valpro.png" data-lightbox="portfolio" data-title="Body Guardian" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
-            
-            <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Commander_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Commander</font></h4>
-                <p>Gloves</p>
-                <div>
-                  <a href="Midas/Valpro/Commander_Valpro.png" data-lightbox="portfolio" data-title="Commander" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
             
             
             <div class="col-lg-4 col-md-6 float-right portfolio-item filter-others">
@@ -594,97 +360,6 @@ body {font-family: "Lato", sans-serif;}
               </div>
             </div>
             </div>
-        
-            <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Foot_Commander_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4> <font color="white">Foot Commander</font></h4>
-                <p>Shoes</p>
-                <div>
-                  <a href="Midas/Valpro/Foot_Commander_Valpro.png" data-lightbox="portfolio" data-title="Foot Commander" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-            </div>
-        
-            <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Guardian_2_Ply_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4> <font color="white">Guardian 2 Ply</font></h4>
-                <p>Masks</p>
-                <div>
-                  <a href="Midas/Valpro/Guardian_2_Ply_Valpro.png" data-lightbox="portfolio" data-title="Guardian 2 Ply" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-            </div>
-        
-            <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Guardian_Earmuffs_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4> <font color="white">Guardian Earmuffs</font></h4>
-                <p>Ears</p>
-                <div>
-                  <a href="Midas/Valpro/Guardian_Earmuffs_Valpro.png" data-lightbox="portfolio" data-title="Guardian Earmuffs" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-            </div>
-        
-            <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Guardian_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4> <font color="white">Guardian Gloves</font></h4>
-                <p>Gloves</p>
-                <div>
-                  <a href="Midas/Valpro/Guardian_Valpro.png" data-lightbox="portfolio" data-title="Guardian Gloves" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-            </div>
-        
-            <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Hardy_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4> <font color="white">Hardy</font></h4>
-                <p>Goggles</p>
-                <div>
-                  <a href="Midas/Valpro/Hardy_Valpro.png" data-lightbox="portfolio" data-title="Hardy" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-            </div>
-        
-            <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Monsoon_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4> <font color="white">Monsoon Boots</font></h4>
-                <p>Shoes</p>
-                <div>
-                  <a href="Midas/Valpro/Monsoon_Valpro.png" data-lightbox="portfolio" data-title="Monsoon Boots" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-            </div>
-        
-            <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Protector_ID_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4> <font color="white">Protector ID</font></h4>
-                <p>Goggles</p>
-                <div>
-                  <a href="Midas/Valpro/Protector_ID_Valpro.png" data-lightbox="portfolio" data-title="Protector ID" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-            </div>
                     
             <div class="col-lg-4 col-md-6 float-right portfolio-item filter-honda">
             <div class="portfolio-wrap">
@@ -725,24 +400,11 @@ body {font-family: "Lato", sans-serif;}
             </div>
             </div>
         
-            <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Ranger_Bowguard_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4> <font color="white">Ranger Bowguard</font></h4>
-                <p>Elbow</p>
-                <div>
-                  <a href="Midas/Valpro/Ranger_Bowguard_Valpro.png" data-lightbox="portfolio" data-title="Ranger Bowguard" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-            </div>
-        
             <div class="col-lg-4 col-md-6 float-right portfolio-item filter-bata">
             <div class="portfolio-wrap">
               <img src="Shoes/IMG-20191205-WA0015.jpg" class="img-fluid" alt="">
               <div class="portfolio-info">
-                  <h4> <font color="white"></font></h4>
+                  <h4> <font color="white">Nitrile Metatarsal</font></h4>
                 <p>Shoes</p>
                 <div>
                   <a href="Shoes/IMG-20191205-WA0015.jpg" data-lightbox="portfolio" data-title="" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
@@ -751,226 +413,7 @@ body {font-family: "Lato", sans-serif;}
             </div>
             </div>
             
-            <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Ranger_CS_Nitrile_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Ranger CS Nitrile</font></h4>
-                <p>Gloves</p>
-                <div>
-                  <a href="Midas/Valpro/Ranger_CS_Nitrile_Valpro.png" data-lightbox="portfolio" data-title="Ranger CS Nitrile" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
             
-            <div class="col-lg-4 col-md-6 float-right portfolio-item filter-bata">
-            <div class="portfolio-wrap">
-              <img src="Shoes/Bata%20Bora%20Derby.PNG" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Bata Bora Derby</font></h4>
-                <p>Shoes</p>
-                <div>
-                  <a href="Shoes/Bata%20Bora%20Derby.PNG" data-lightbox="portfolio" data-title="Bata Bora Derby" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-            
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Ranger_CV_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Ranger CV</font></h4>
-                <p>Jacket</p>
-                <div>
-                  <a href="Midas/Valpro/Ranger_CV_Valpro.png" data-lightbox="portfolio" data-title="Ranger_CV" class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-            
-            <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Ranger_EPC_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Ranger EPC</font></h4>
-                <p>Ears</p>
-                <div>
-                  <a href="Midas/Valpro/Ranger_EPC_Valpro.png" data-lightbox="portfolio" data-title="Ranger EPC" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
-            
-            <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Ranger_Nitrilon_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Ranger Nitrilon</font></h4>
-                  <p><font color="white">Gloves</font></p>
-                <div>
-                  <a href="Midas/Valpro/Ranger_Nitrilon_Valpro.png" data-lightbox="portfolio" data-title="Ranger Nitrilon" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Ranger_Nuisance_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Ranger Nuisance</font></h4>
-                  <p><font color="white">Masks</font></p>
-                <div>
-                  <a href="Midas/Valpro/Ranger_Nuisance_Valpro.png" data-lightbox="portfolio" data-title="Ranger Nuisance" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
-          
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Ranger_PU_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Ranger PU</font></h4>
-                  <p><font color="white">Gloves</font></p>
-                <div>
-                  <a href="Midas/Valpro/Ranger_PU_Valpro.png" data-lightbox="portfolio" data-title="Ranger PU" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Ranger_PVC_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Ranger PVC</font></h4>
-                  <p><font color="white">Gloves</font></p>
-                <div>
-                  <a href="Midas/Valpro/Ranger_PVC_Valpro.png" data-lightbox="portfolio" data-title="Ranger PVC" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Ranger_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Ranger</font></h4>
-                  <p><font color="white">Gloves</font></p>
-                <div>
-                  <a href="Midas/Valpro/Ranger_Valpro.png" data-lightbox="portfolio" data-title="Ranger" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Ranger_Visor_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Ranger Visor</font></h4>
-                  <p><font color="white">Head</font></p>
-                <div>
-                  <a href="Midas/Valpro/Ranger_Visor_Valpro.png" data-lightbox="portfolio" data-title="Ranger Visor" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Roxy_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Roxy</font></h4>
-                  <p><font color="white">Shoes</font></p>
-                <div>
-                  <a href="Midas/Valpro/Roxy_Valpro.png" data-lightbox="portfolio" data-title="Roxy" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Storm_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Storm</font></h4>
-                  <p><font color="white">Goggles</font></p>
-                <div>
-                  <a href="Midas/Valpro/Storm_Valpro.png" data-lightbox="portfolio" data-title="Storm" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Warrior_Rubber_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Warrior Rubber</font></h4>
-                  <p><font color="white">Gloves</font></p>
-                <div>
-                  <a href="Midas/Valpro/Warrior_Rubber_Valpro.png" data-lightbox="portfolio" data-title="Warrior Rubber" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Warrior_Vinyl_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Warrior Vinyl</font></h4>
-                  <p><font color="white">Gloves</font></p>
-                <div>
-                  <a href="Midas/Valpro/Warrior_Vinyl_Valpro.png" data-lightbox="portfolio" data-title="Warrior Vinyl" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-          <div class="col-lg-4 col-md-6 float-right portfolio-item filter-valpro filter-midas">
-            <div class="portfolio-wrap">
-              <img src="Midas/Valpro/Head_Guardian_Valpro.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Head Guardian</font></h4>
-                  <p><font color="white">Head</font></p>
-                <div>
-                  <a href="Midas/Valpro/Head_Guardian_Valpro.png" data-lightbox="portfolio" data-title="Head Guardian" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
-
-            <div class="col-lg-4 col-md-6 float-right portfolio-item filter-others">
-            <div class="portfolio-wrap">
-              <img src="Masks/IMG-20200210-WA0044.png" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4><font color="white">Dust Mask</font></h4>
-                <p>Masks</p>
-                <div>
-                  <a href="Masks/IMG-20200210-WA0044.png" data-lightbox="portfolio" data-title="Dust Mask" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-          </div> 
-            
-            <div class="col-lg-4 col-md-6 float-right portfolio-item filter-bata">
-            <div class="portfolio-wrap">
-              <img src="Shoes/Moulded%20Lite%20Nitrile%20Sole.PNG" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                  <h4> <font color="white">Moulded Lite Nitrile Sole</font></h4>
-                <p>Shoes</p>
-                <div>
-                  <a href="Shoes/Moulded%20Lite%20Nitrile%20Sole.PNG" data-lightbox="portfolio" data-title="Moulded Lite Nitrile Sole" class="link-preview" title = "Preview"><i class="ion ion-eye"></i></a>
-                </div>
-              </div>
-            </div>
-            </div>
             
             </div>
           </div>
@@ -1029,7 +472,6 @@ body {font-family: "Lato", sans-serif;}
   <!-- JavaScript Libraries -->
   <script src="lib/jquery/jquery.min.js"></script>
   <script src="lib/jquery/jquery-migrate.min.js"></script>
-  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="lib/easing/easing.min.js"></script>
   <script src="lib/mobile-nav/mobile-nav.js"></script>
   <script src="lib/wow/wow.min.js"></script>
