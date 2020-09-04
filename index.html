@@ -29,6 +29,79 @@
           font-size: 30px;
         }
       }
+        .loader {
+        position: fixed;
+        background-color: #FFF;
+        opacity: 1;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10;
+      }
+      @import "compass/css3";
+ .loader {
+	 position: absolute;
+	 top: 50%;
+	 left: 50%;
+	 margin-top: -50px;
+	 margin-left: -50px;
+}
+ .loader {
+	 display: block;
+	 width: 100px;
+	 height: 100px;
+	 position: relative;
+	 transform-origin: 63px 63px;
+	 animation: spin 1s infinite linear;
+}
+ .loader .spinner {
+	 display: block;
+	 width: 100%;
+	 height: 100%;
+	 border-radius: 50%;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 border-width: 0px 0px 26px 26px;
+	 border-style: solid;
+	 border-color: transparent;
+}
+ .loader .spinner.yellow {
+	 border-left-color: #ff9;
+}
+ .loader .spinner.orange {
+	 border-left-color: #fc6;
+	 transform: rotate(-45deg);
+}
+ .loader .spinner.red {
+	 border-left-color: #f96;
+	 transform: rotate(-90deg);
+}
+ .loader .spinner.pink {
+	 border-left-color: #f69;
+	 transform: rotate(-135deg);
+}
+ .loader .spinner.violet {
+	 border-left-color: #c6c;
+	 transform: rotate(-180deg);
+}
+ .loader .spinner.mauve {
+	 border-left-color: #c9c;
+	 transform: rotate(-225deg);
+}
+ .loader .spinner.light-yellow {
+	 border-left-color: #fffad5;
+	 transform: rotate(-270deg);
+}
+ @keyframes spin {
+	 from {
+		 transform: rotate(0deg);
+	}
+	 to {
+		 transform: rotate(-360deg);
+	}
+}
   </style>
 
   <!-- Favicons -->
@@ -60,7 +133,31 @@
 </head>
 
 <body>
-
+<!--==========================
+  Loader
+  ============================-->
+  <div class="loader">
+  <header style="height: 150px;" id="header" class="fixed-top">
+        <div>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <h1 class="text-light"><span><b style="position: auto;"><h1 class="section-title example" style="color: rgb(103, 130, 248); position: relative;"><b class="example text-center">Bihani Enterprises</b></h1></b></span></h1>
+        <a href="index.html#intro" class="scrollto"><img src="Images For Website\Bihani_Enterprises Logo.PNG" style="margin-top: -100px; padding-left: -60px; margin-left: 10px;" width="68px" alt="" class="img-fluid"></a>
+      </div>
+         <div>
+           <font class="float-left" face="Montserrat" size="3rem"><b class="text-center" style="position: absolute; margin-top: -35px;">Mfrs & Authorised Distributors Of :</b></font><br>
+            <img src="Images For Website\Authorised Distributors.png" class="justify-content-center" width="360px" style="margin-top: -50px; text-align: left;">
+        </div>
+    </header>
+    <div class='loader justify-content-center text-center'>
+            <div class='spinner yellow'></div>
+            <div class='spinner orange'></div>
+            <div class='spinner red'></div>
+            <div class='spinner pink'></div>
+            <div class='spinner violet'></div>
+            <div class='spinner mauve'></div>
+            <div class='spinner light-yellow'></div>
+     </div>  
+  </div>
   <!--==========================
   Header
   ============================-->
