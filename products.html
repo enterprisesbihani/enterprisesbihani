@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
   <meta charset="utf-8">
   <title>Bihani Enterprises - Products</title>
   <meta charset="utf-8">
@@ -12,13 +15,13 @@
       }  
       @media screen and (min-width: 601px) {
         h1.example {
-          font-size: 35px;
+          font-size: 40px;
         }
       }
 
       @media screen and (max-width: 600px) {
         h1.example {
-          font-size: 20px;
+          font-size: 30px;
         }
       }
 * {box-sizing: border-box}
@@ -33,36 +36,6 @@ body {font-family: "Lato", sans-serif;}
 .btn:hover {
   background-color: rgb(0, 110, 255);
 }
-@media screen and (min-width: 601px) {
-        #a {
-          font-size: 1rem;
-        }
-      }
-
-      @media screen and (max-width: 600px) {
-        #a {
-          font-size: 0.8rem;
-        }
-        #b {
-          margin-left: 298px;
-          margin-top: -125px;
-        }
-        #img {
-          margin-top: -10px;
-          width: 58px;
-        }
-      }
-      @media screen and (min-width: 991px) {
-        #navbarSupportedContent {
-          margin-left: 500px;
-        }
-      }
-
-      @media screen and (max-width: 990px) {
-        #navbarSupportedContent {
-          margin-left: 10px;
-        }
-      }
 </style> 
 
   <!-- Favicons -->
@@ -73,8 +46,10 @@ body {font-family: "Lato", sans-serif;}
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
   <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="lib/animate/animate.min.css" rel="stylesheet">
   <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
   <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -82,7 +57,6 @@ body {font-family: "Lato", sans-serif;}
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 
 </head>
     
@@ -90,27 +64,31 @@ body {font-family: "Lato", sans-serif;}
     <!--==========================
       Products Section
     ============================-->
-   <section id="portfolio" class="clearfix" style="margin-top: -60px;">
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">            
-          <div>
-              <img id="img" loading="lazy" src="Images For Website/Bihani_Enterprises_Logo-removebg-preview.png" style="position: absolute;" class="img-fluid" width="62px">
-              <h1 class="navbar-brand example" style="color: rgb(103, 130, 248);margin-left: 60px; font-weight: bold;">Bihani Enterprises</h1>
-  
-        <h6 id="a" style="margin-left: 55px; margin-top: -20px;"><b>Mfrs & Authorised Distributors Of :</b></h6>
-        <img loading="lazy" class="img-fluid" style="width: 360px; margin-top: -10px;" src="Images For Website\Authorised Distributors.png">
-          </div>
-        <button id="b" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+   <section id="portfolio" class="clearfix" style="padding-bottom: 0px; margin-bottom: 0px; margin-top: 0px;">
+      <div class="container">
+
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse nav-pills" id="navbarSupportedContent">
-          <a href="index#intro" class="nav-link">Home</a><hr class="dropdown-divide">
-          <a href="index.html#about" class="nav-link">About Us</a><hr class="dropdown-divide">
-          <a href="products.html" class="nav-link">Products</a><hr class="dropdown-divide">
-          <a href="index.html#contact" class="nav-link">Contact Us</a><hr class="dropdown-divide">
-        </div>
+          <header style="height: 150px;" id="header" class="fixed-top">
+          <div>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <h1 class="text-light"><span><b style="position: auto;"><h1 class="section-title example" style="color: rgb(103, 130, 248); position: relative; margin-left: 70px"><b class="example">Bihani Enterpries</b></h1></b></span></h1>
+        <a href="index.html#intro" class="scrollto"><img src="Images For Website\Bihani_Enterprises Logo.PNG" style="margin-top: -100px; padding-left: -60px; margin-left: 10px;" width="68px" alt="" class="img-fluid"></a>
       </div>
-    </nav>
+         <div>
+            <h6 style="margin-top: -40px; margin-left: 60px; position: absolute;"><b>Mfrs & Authorised Distributors Of:</b></h6><br>
+            <img src="Images For Website\Authorised Distributors.png" width="360px" style="margin-top: -60px; margin-left: 15px; text-align: left;">
+        </div>
+        <nav class="main-nav float-right d-none d-lg-block" style="margin-top: -100px; margin-right: 20px;">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="products.html" class="active" style=" color: rgb(0, 110, 255);">Products</a></li>
+          <li><a href="index.html#contact">Contact Us</a></li>
+        </ul>
+      </nav>
+          </header>
         
           <h2 class="h2-portfolio" style="text-align: center;font-weight: 1000; text-decoration-style: inherit; margin-bottom: -50px; margin-top: 100px;">Our Products</h2>
 
@@ -450,9 +428,6 @@ body {font-family: "Lato", sans-serif;}
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
   <script>
     function w3_open() {
       document.getElementById("mySidebar").style.width = "100%";
