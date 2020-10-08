@@ -36,6 +36,10 @@ body {font-family: "Lato", sans-serif;}
 .btn:hover {
   background-color: rgb(0, 110, 255);
 }
+#portfolio #portfolio-flters li:hover, #portfolio #portfolio-flters li.filter-active {
+    background: #007bff;
+    color: #fff;
+}
 </style> 
 
   <!-- Favicons -->
@@ -95,11 +99,10 @@ body {font-family: "Lato", sans-serif;}
         <div class="row">
           <div class="col-lg-12">
             <ul id="portfolio-flters" style="margin-top: 80px;">
-              <li class="w3-button w3-teal w3-xlarge" onclick="w3_open()" data-filter=".filter-midas"><img src="Images For Website\MIDAS-Logo.png" width="80px"></li>
+              <li class="w3-button w3-teal w3-xlarge filter-active" onclick="w3_open(), close()" data-filter=".filter-midas"><img src="Images For Website\MIDAS-Logo.png" width="80px"></li>
               <li onclick="w3_close()" data-filter=".filter-bata"><img src="Images For Website\Bata_Industrials_logo.png" height="30px" width="110px"></li>
               <li onclick="w3_close()" data-filter=".filter-honda"><img src="Images For Website\Honda_Logo.png" width="80px"></li>
               <li onclick="w3_close()" data-filter=".filter-others"><img src="Images For Website\others.gif" width="80px"></li>
-              <li class="filter-active" onclick="w3_close()" data-filter="*"><img src="Images For Website\all.gif" width="40px"></li>
               <div class="w3-teal">
               </div>
               <div style="display:none" id="mySidebar">
@@ -157,7 +160,7 @@ body {font-family: "Lato", sans-serif;}
               </div>
         </div>
           
-        <div class="row portfolio-container">
+        <div class="row portfolio-container" id="portfolio-container">
             
           <div class="col-lg-4 col-md-6 float-right portfolio-item filter-bata">
           <div class="portfolio-wrap">
@@ -436,7 +439,27 @@ body {font-family: "Lato", sans-serif;}
     
     function w3_close() {
       document.getElementById("mySidebar").style.display = "none";
+      document.getElementById('portfolio-container').style.display = "block";
     }
+
+    function close() {
+      document.getElementById('portfolio-container').style.display = "none";
+    }
+
+    //check for Navigation Timing API support
+if (window.performance) {
+  console.info("window.performance works fine on this browser");
+}
+console.info(performance.navigation.type);
+if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
+  w3_open();
+  close();
+}
+if (w3_open()) {
+  close();
+}
+
+
     </script>
   </div>
   </footer>
