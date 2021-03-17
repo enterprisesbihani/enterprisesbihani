@@ -100,7 +100,7 @@ body {font-family: "Lato", sans-serif;}
           <div class="col-lg-12">
             <ul id="portfolio-flters" style="margin-top: 80px;">
               <li class="w3-button w3-teal w3-xlarge filter-active" onclick="w3_open(), close()" data-filter=".filter-midas"><img src="Images For Website\MIDAS-Logo.png" width="80px"></li>
-              <li onclick="w3_close()" data-filter=".filter-bata"><img src="Images For Website\Bata_Industrials_logo.png" height="30px" width="110px"></li>
+              <li onclick="w3_close()" data-filter=".filter-bata"><img src="Images For Website\Bata_Industrials_logo.png" height="30px" width="140px"></li>
               <li onclick="w3_close()" data-filter=".filter-honda"><img src="Images For Website\Honda_Logo.png" width="80px"></li>
               <li onclick="w3_close()" data-filter=".filter-others"><img src="Images For Website\others.gif" width="80px"></li>
               <div class="w3-teal">
@@ -449,11 +449,6 @@ body {font-family: "Lato", sans-serif;}
     //check for Navigation Timing API support
 if (window.performance) {
   console.info("window.performance works fine on this browser");
-}
-console.info(performance.navigation.type);
-if (performance.navigation.type == performance.navigation.TYPE_RELOAD) {
-  w3_open();
-  close();
 }
 if (w3_open()) {
   close();
